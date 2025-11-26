@@ -1,6 +1,33 @@
 // Main JavaScript for Alumni Portal
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Hero Image Slider
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    if (heroSlides.length > 0) {
+        let currentSlide = 0;
+
+        function nextSlide() {
+            heroSlides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % heroSlides.length;
+            heroSlides[currentSlide].classList.add('active');
+        }
+
+        // Change slide every 5 seconds
+        setInterval(nextSlide, 5000);
+    }
+
+    // Pause scrolling animation on hover for scrolling gallery
+    const scrollTracks = document.querySelectorAll('.scroll-track');
+    scrollTracks.forEach(track => {
+        track.addEventListener('mouseenter', function() {
+            this.style.animationPlayState = 'paused';
+        });
+
+        track.addEventListener('mouseleave', function() {
+            this.style.animationPlayState = 'running';
+        });
+    });
+
     // Auto-hide alerts after 5 seconds
     const alerts = document.querySelectorAll('.alert');
     alerts.forEach(alert => {

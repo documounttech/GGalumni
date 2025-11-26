@@ -137,18 +137,209 @@ footer a:hover {
     filter: brightness(0) invert(1);
 }
 
+/* Hero Section Enhancements */
+.hero-section {
+    min-height: 600px;
+    position: relative;
+}
+
+.min-vh-50 {
+    min-height: 50vh;
+}
+
+/* Hero Background Slider */
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%);
+    z-index: 1;
+}
+
+.hero-title {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    animation: bounce 2s infinite;
+}
+
+.scroll-indicator i {
+    font-size: 2rem;
+    color: white;
+    opacity: 0.8;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scrolling Gallery Section */
+.scrolling-gallery-section {
+    overflow: hidden;
+}
+
+.scrolling-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.scroll-track {
+    display: inline-flex;
+    gap: 20px;
+    animation: scroll 40s linear infinite;
+}
+
+.scroll-track-1 {
+    animation: scroll 40s linear infinite;
+}
+
+.scroll-track-2 {
+    animation: scroll-reverse 40s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-reverse {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.scroll-item {
+    position: relative;
+    width: 350px;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.scroll-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-item:hover .scroll-track {
+    animation-play-state: paused;
+}
+
+.scroll-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.scroll-item:hover img {
+    transform: scale(1.1);
+}
+
+.scroll-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.scroll-item:hover .scroll-overlay {
+    transform: translateY(0);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .hero-section {
-        min-height: 300px;
+        min-height: 400px;
     }
-    
+
     .hero-section h1 {
         font-size: 2rem;
     }
-    
+
     .feature-icon {
         font-size: 2rem;
+    }
+
+    .scroll-item {
+        width: 250px;
+        height: 180px;
+    }
+
+    .scroll-track {
+        gap: 15px;
     }
 }
 

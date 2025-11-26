@@ -1,20 +1,140 @@
 <%- include('partials/header') %>
 
-<div class="hero-section bg-primary text-white py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <h1 class="display-4 fw-bold mb-4">Welcome to Alumni Portal</h1>
-                <p class="lead mb-4">Connect with fellow alumni, discover opportunities, and stay updated with the latest news and events from our community.</p>
+<!-- Enhanced Hero Section with Background Slider -->
+<div class="hero-section text-white py-5 position-relative overflow-hidden">
+    <!-- Background Image Slider -->
+    <div class="hero-slider">
+        <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&q=80');"></div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1200&q=80');"></div>
+        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1562774053-701939374585?w=1200&q=80');"></div>
+    </div>
+
+    <!-- Dark Overlay -->
+    <div class="hero-overlay"></div>
+
+    <!-- Hero Content -->
+    <div class="container position-relative" style="z-index: 2;">
+        <div class="row align-items-center min-vh-50">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-3 fw-bold mb-4 hero-title">Welcome to Alumni Portal</h1>
+                <p class="lead mb-4 fs-4">Connect with fellow alumni, discover opportunities, and stay updated with the latest news and events from our community.</p>
                 <% if (!user) { %>
-                    <a href="/register" class="btn btn-light btn-lg me-2">Join Now</a>
-                    <a href="/login" class="btn btn-outline-light btn-lg">Login</a>
+                    <a href="/register" class="btn btn-light btn-lg me-2 px-4 py-3">Join Now</a>
+                    <a href="/login" class="btn btn-outline-light btn-lg px-4 py-3">Login</a>
                 <% } else { %>
-                    <a href="/dashboard" class="btn btn-light btn-lg">Go to Dashboard</a>
+                    <a href="/dashboard" class="btn btn-light btn-lg px-4 py-3">Go to Dashboard</a>
                 <% } %>
             </div>
-            <div class="col-md-6 text-center">
-                <i class="bi bi-people-fill" style="font-size: 200px; opacity: 0.3;"></i>
+        </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+        <i class="bi bi-chevron-down"></i>
+    </div>
+</div>
+
+<!-- Scrolling Images Gallery Section -->
+<div class="scrolling-gallery-section py-5 bg-light">
+    <div class="container mb-4">
+        <h2 class="text-center mb-2">Our Alumni Community</h2>
+        <p class="text-center text-muted mb-4">Celebrating moments, achievements, and connections</p>
+    </div>
+
+    <!-- Scrolling Images Container -->
+    <div class="scrolling-wrapper">
+        <div class="scroll-track scroll-track-1">
+            <div class="scroll-item">
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400&q=80" alt="Campus Event">
+                <div class="scroll-overlay">
+                    <span>Campus Events</span>
+                </div>
+            </div>
+            <div class="scroll-item">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&q=80" alt="Networking">
+                <div class="scroll-overlay">
+                    <span>Networking</span>
+                </div>
+            </div>
+            <div class="scroll-item">
+                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=400&q=80" alt="Graduation">
+                <div class="scroll-overlay">
+                    <span>Graduation</span>
+                </div>
+            </div>
+            <div class="scroll-item">
+                <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=400&q=80" alt="Workshop">
+                <div class="scroll-overlay">
+                    <span>Workshops</span>
+                </div>
+            </div>
+            <div class="scroll-item">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&q=80" alt="Team Work">
+                <div class="scroll-overlay">
+                    <span>Collaboration</span>
+                </div>
+            </div>
+            <!-- Duplicate for seamless loop -->
+            <div class="scroll-item">
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400&q=80" alt="Campus Event">
+                <div class="scroll-overlay">
+                    <span>Campus Events</span>
+                </div>
+            </div>
+            <div class="scroll-item">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&q=80" alt="Networking">
+                <div class="scroll-overlay">
+                    <span>Networking</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Row - Scrolling in Opposite Direction -->
+    <div class="scrolling-wrapper mt-4">
+        <div class="scroll-track scroll-track-2">
+            <div class="scroll-item">
+                <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=400&q=80" alt="Success Stories">
+                <div class="scroll-overlay">
+                    <span>Success Stories</span>
+                </div>
+            </div>
+            <div class="scroll-item">
+                <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=400&q=80" alt="Reunion">
+                <div class="scroll-overlay">
+                    <span>Reunions</span>
+                </div>
+            </div>
+            <div class="scroll-item">
+                <img src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?w=400&q=80" alt="Innovation">
+                <div class="scroll-overlay">
+                    <span>Innovation</span>
+                </div>
+            </div>
+            <div class="scroll-item">
+                <img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=400&q=80" alt="Sports">
+                <div class="scroll-overlay">
+                    <span>Sports</span>
+                </div>
+            </div>
+            <div class="scroll-item">
+                <img src="https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?w=400&q=80" alt="Library">
+                <div class="scroll-overlay">
+                    <span>Academic Life</span>
+                </div>
+            </div>
+            <!-- Duplicate for seamless loop -->
+            <div class="scroll-item">
+                <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=400&q=80" alt="Success Stories">
+                <div class="scroll-overlay">
+                    <span>Success Stories</span>
+                </div>
+            </div>
+            <div class="scroll-item">
+                <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=400&q=80" alt="Reunion">
+                <div class="scroll-overlay">
+                    <span>Reunions</span>
+                </div>
             </div>
         </div>
     </div>
