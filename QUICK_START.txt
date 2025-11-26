@@ -1,0 +1,108 @@
+===============================================
+ALUMNI PORTAL - QUICK START GUIDE
+===============================================
+
+📋 PREREQUISITES:
+- Node.js installed (v14 or higher)
+- npm (comes with Node.js)
+- A web browser
+
+===============================================
+🚀 INSTALLATION STEPS:
+===============================================
+
+1. Open Terminal/Command Prompt and navigate to the project folder:
+   cd alumni-portal
+
+2. Install dependencies:
+   npm install
+
+3. Start the server:
+   npm start
+
+4. Open your browser and visit:
+   http://localhost:3000
+
+===============================================
+✨ FEATURES:
+===============================================
+
+✓ User Registration & Login
+✓ Alumni Directory with Search & Filters
+✓ Events Management
+✓ Job Board
+✓ News & Updates
+✓ User Profile Management
+✓ Dashboard with Statistics
+
+===============================================
+👤 GETTING STARTED:
+===============================================
+
+1. Register a new account:
+   - Click "Register" in the navigation
+   - Fill in your details
+   - Submit to create your account
+
+2. Login to your account:
+   - Use your email and password
+   - Access the dashboard
+
+3. Explore features:
+   - Browse Alumni Directory
+   - Create/View Events
+   - Post/Browse Jobs
+   - Share News & Updates
+   - Update Your Profile
+
+===============================================
+📁 PROJECT STRUCTURE:
+===============================================
+
+alumni-portal/
+├── server.js          # Main server file
+├── package.json       # Dependencies
+├── README.md          # Full documentation
+├── data/              # JSON data storage
+├── views/             # EJS templates
+│   ├── partials/      # Header & Footer
+│   └── *.ejs          # Page templates
+└── public/            # Static assets
+    ├── css/           # Stylesheets
+    ├── js/            # JavaScript
+    └── images/        # Images
+
+===============================================
+🔐 SECURITY:
+===============================================
+
+- Passwords are hashed using bcryptjs
+- Session-based authentication
+- Protected routes require login
+
+===============================================
+🛠️ CUSTOMIZATION:
+===============================================
+
+To change the port (default: 3000):
+- Edit server.js
+- Change: const PORT = 3000;
+
+To modify departments list:
+- Edit views/register.ejs
+- Update the department dropdown options
+
+===============================================
+📞 SUPPORT:
+===============================================
+
+For issues or questions:
+- Check README.md for detailed documentation
+- Review the code comments in server.js
+- Test with sample data
+
+===============================================
+🎉 ENJOY YOUR ALUMNI PORTAL!
+===============================================
+
+Built with Node.js, Express, EJS, and Bootstrap

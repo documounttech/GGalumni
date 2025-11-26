@@ -1,0 +1,103 @@
+<%- include('partials/header') %>
+
+<div class="container my-5">
+    <h2 class="mb-4">Welcome back, <%= user.name %>!</h2>
+    
+    <div class="row mb-4">
+        <div class="col-md-3 mb-3">
+            <div class="card bg-primary text-white">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="card-title mb-0">Total Alumni</h6>
+                            <h2 class="mt-2"><%= totalAlumni %></h2>
+                        </div>
+                        <i class="bi bi-people-fill" style="font-size: 3rem; opacity: 0.5;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card bg-success text-white">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="card-title mb-0">Upcoming Events</h6>
+                            <h2 class="mt-2"><%= upcomingEvents %></h2>
+                        </div>
+                        <i class="bi bi-calendar-event" style="font-size: 3rem; opacity: 0.5;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card bg-warning text-white">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="card-title mb-0">Active Jobs</h6>
+                            <h2 class="mt-2"><%= activeJobs %></h2>
+                        </div>
+                        <i class="bi bi-briefcase-fill" style="font-size: 3rem; opacity: 0.5;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card bg-danger text-white">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="card-title mb-0">Recent News</h6>
+                            <h2 class="mt-2"><%= recentNews %></h2>
+                        </div>
+                        <i class="bi bi-newspaper" style="font-size: 3rem; opacity: 0.5;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="bi bi-person-badge"></i> My Profile</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Name:</strong> <%= user.name %></p>
+                    <p><strong>Email:</strong> <%= user.email %></p>
+                    <p><strong>Batch:</strong> <%= user.batch %></p>
+                    <p><strong>Department:</strong> <%= user.department %></p>
+                    <a href="/profile" class="btn btn-primary">Edit Profile</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0"><i class="bi bi-grid-3x3-gap"></i> Quick Actions</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-grid gap-2">
+                        <a href="/directory" class="btn btn-outline-primary">
+                            <i class="bi bi-search"></i> Browse Alumni Directory
+                        </a>
+                        <a href="/events" class="btn btn-outline-success">
+                            <i class="bi bi-calendar-plus"></i> View Events
+                        </a>
+                        <a href="/jobs" class="btn btn-outline-warning">
+                            <i class="bi bi-briefcase"></i> Browse Job Opportunities
+                        </a>
+                        <a href="/news" class="btn btn-outline-danger">
+                            <i class="bi bi-newspaper"></i> Read Latest News
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %>
