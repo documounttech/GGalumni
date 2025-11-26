@@ -22,12 +22,12 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 10px;
     background: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .feature-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .feature-icon {
@@ -37,13 +37,13 @@ body {
 /* Cards */
 .card {
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* Avatar */
@@ -53,7 +53,7 @@ body {
 
 /* Navigation */
 .navbar {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
@@ -105,6 +105,7 @@ footer a:hover {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -142,11 +143,11 @@ footer a:hover {
     .hero-section {
         min-height: 300px;
     }
-    
+
     .hero-section h1 {
         font-size: 2rem;
     }
-    
+
     .feature-icon {
         font-size: 2rem;
     }
@@ -177,4 +178,27 @@ footer a:hover {
 .spinner-border {
     width: 3rem;
     height: 3rem;
+}
+
+/* Hero Carousel Styles */
+.hero-section .carousel-item {
+    height: 600px;
+}
+
+.hero-section .carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    filter: brightness(0.7);
+    /* Darken image for better text readability */
+}
+
+.hero-section .carousel-caption {
+    bottom: 30%;
+    z-index: 2;
+}
+
+/* Ensure text is readable */
+.hero-section .carousel-caption h1,
+.hero-section .carousel-caption p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
